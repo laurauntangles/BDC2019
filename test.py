@@ -29,9 +29,13 @@ def main():
 
 main()
 
+
 class XML2DataFrame():
 
     def __init__(self, xml_data):
         self.tree = et.parse(xml_data)
         self.root = self.tree.getroot()
 
+    def loop_tree(self):
+        for i in self.root:
+            print(i)
